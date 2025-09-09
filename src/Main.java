@@ -57,6 +57,7 @@ public class Main {
         }
     */
         //temperature convertor
+    /*
         double temp;
         double newTemp;
         String unit;
@@ -70,6 +71,46 @@ public class Main {
         newTemp = (unit.equals("C")) ? (temp - 32) * 5 / 9 : (temp * 5 / 9);
 
         System.out.printf("the new temperature is %.2f%s", newTemp, unit);
+    */
+
+        //simple calculator
+        double num1;
+        double num2;
+        char operator;
+        double result = 0;
+        boolean validOperator = true;
+
+        System.out.print("enter the first number: ");
+        num1 = scanner.nextDouble();
+
+        System.out.print("enter an operator (+, -, *, /, ^ ): ");
+        operator = scanner.next().charAt(0);
+
+        System.out.print("enter the second number: ");
+        num2 = scanner.nextDouble();
+
+        switch (operator){
+            case '+' -> result = num1 + num2;
+            case '-' -> result = num1 - num2;
+            case '*' -> result = num1 * num2;
+            case '/' -> {
+                if (num2 == 0){
+                    System.out.println("cannot divide by 0");
+                    validOperator = false;
+                } else {
+                    result = num1 / num2;
+                }
+            }
+            case '^' -> result = Math.pow(num1 , num2);
+            default -> {
+                System.out.println("Invalid Operator");
+                validOperator = false;
+            }
+        }
+        if (validOperator){
+            System.out.println(result);
+        }
+
 
 
 
