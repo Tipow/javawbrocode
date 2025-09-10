@@ -74,6 +74,7 @@ public class Main {
     */
 
         //simple calculator
+    /*
         double num1;
         double num2;
         char operator;
@@ -110,6 +111,25 @@ public class Main {
         if (validOperator){
             System.out.println(result);
         }
+    */
+        // validating username
+
+    /*
+        String userName;
+        System.out.print("enter your username: ");
+        userName = scanner.nextLine();
+
+        if ( userName.length() < 4 || userName.length() > 12){
+            System.out.println("username must be  between 4-12 characters");
+        }
+        else if (userName.contains(" ") || userName.contains("_")) {
+            System.out.println("username must not contain spaces or underscores");
+        }
+        else {
+            System.out.println("welcome" + userName);
+        }
+        */
+
 
 
 
