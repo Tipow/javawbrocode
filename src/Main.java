@@ -1,4 +1,5 @@
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -130,8 +131,33 @@ public class Main {
         }
         */
 
+        //number guessing game
+
+        Random random = new Random();
+
+        int guess;
+        int attempts = 0;
+        int randomNumber = random.nextInt(1,101);
 
 
+        System.out.println("number guessing game");
+        System.out.println("guess a number between 1-100: ");
+
+        do {
+            System.out.print("enter a guess: ");
+            guess = scanner.nextInt();
+            attempts++;
+
+            if (guess < randomNumber){
+                System.out.println("too low, try again");
+            }
+            else if (guess > randomNumber) {
+                System.out.println("too high, try again");
+            }
+            else System.out.println("correct, the number was" + randomNumber);
+        }while (guess != randomNumber);
+
+        System.out.println("number of attempts was: " + attempts);
 
 
         scanner.close();
