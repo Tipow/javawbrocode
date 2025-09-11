@@ -3,7 +3,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) throws InterruptedException {
 
         // compound interest calculator
 
@@ -134,7 +134,7 @@ public class Main {
         //number guessing game
 
         Random random = new Random();
-
+/*
         int guess;
         int attempts = 0;
         int randomNumber = random.nextInt(1,101);
@@ -158,6 +158,16 @@ public class Main {
         }while (guess != randomNumber);
 
         System.out.println("number of attempts was: " + attempts);
+*/
+        //new year countdown using for loop
+
+ /*       for (int i = 10; i >= 0; i--){
+            System.out.println(i);
+            Thread.sleep(1000);
+        }
+        System.out.println("happy new year");
+*/
+
 
 
         scanner.close();
