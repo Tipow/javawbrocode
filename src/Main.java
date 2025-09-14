@@ -174,33 +174,31 @@ public class Main {
         boolean isRunning = true;
         int choice;
 
-        System.out.println("****************");
-        System.out.println("banking program");
-        System.out.println("****************");
-        System.out.println("1. show balance");
-        System.out.println("2. deposit");
-        System.out.println("3. withdraw");
-        System.out.println("4. exit");
-        System.out.println("****************");
+        while(isRunning){
+            System.out.println("****************");
+            System.out.println("banking program");
+            System.out.println("****************");
+            System.out.println("1. show balance");
+            System.out.println("2. deposit");
+            System.out.println("3. withdraw");
+            System.out.println("4. exit");
+            System.out.println("****************");
 
-        System.out.print("enter your choice (1-4): ");
-        choice = scanner.nextInt();
+            System.out.print("enter your choice (1-4): ");
+            choice = scanner.nextInt();
 
-        switch(choice){
-            case 1 -> System.out.println("show balance");
-            case 2 -> System.out.println("deposit");
-            case 3 -> System.out.println("withdraw");
-            case 4 -> isRunning = false;
-            default -> System.out.println("invalid choice");
+            switch(choice){
+                case 1 -> System.out.println("show balance");
+                case 2 -> System.out.println("deposit");
+                case 3 -> System.out.println("withdraw");
+                case 4 -> isRunning = false;
+                default -> System.out.println("invalid choice");
+
+            }
 
         }
-
-
-
-
-
-
         scanner.close();
     }
+    static void showBalance(double balance)
 
 }
