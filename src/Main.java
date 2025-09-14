@@ -3,11 +3,12 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
+    static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) throws InterruptedException {
 
         // compound interest calculator
 
-        Scanner scanner = new Scanner(System.in);
+
     /*
         System.out.print("enter the principal: ");
         double principal = scanner.nextDouble();
@@ -170,7 +171,7 @@ public class Main {
 
         //java banking program (beginners)
 
-        double balance;
+        double balance = 0;
         boolean isRunning = true;
         int choice;
 
@@ -188,7 +189,7 @@ public class Main {
             choice = scanner.nextInt();
 
             switch(choice){
-                case 1 -> System.out.println("show balance");
+                case 1 -> showBalance(balance);
                 case 2 -> System.out.println("deposit");
                 case 3 -> System.out.println("withdraw");
                 case 4 -> isRunning = false;
@@ -199,6 +200,14 @@ public class Main {
         }
         scanner.close();
     }
-    static void showBalance(double balance)
+    static void showBalance(double balance){
+        System.out.printf("$%.2f\n", balance);
+    }
+    static double deposit(){
+        double amount;
+        System.out.print("enter an amount to be deposited");
+        amount = scanner.nextDouble();
+        return
+    }
 
 }
