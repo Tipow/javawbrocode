@@ -220,6 +220,19 @@ public class Main {
             System.out.println("number of dice must be greater than 0");
         }
 */
+
+        char[][] telephone = {{'1','2','3'},
+                              {'4','5','6'},
+                              {'7','8','9'},
+                              {'*','0','#'}
+        };
+
+        for (char[] row : telephone){
+            for (char number : row){
+                System.out.print(number + " ");
+            }
+            System.out.println();
+        }
         scanner.close();
     }
     /* static void showBalance(double balance){
