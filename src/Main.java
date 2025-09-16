@@ -190,14 +190,14 @@ public class Main {
 
             switch(choice){
                 case 1 -> showBalance(balance);
-                case 2 -> System.out.println("deposit");
-                case 3 -> System.out.println("withdraw");
+                case 2 -> balance += deposit();
+                case 3 -> balance -= withdraw(balance);
                 case 4 -> isRunning = false;
                 default -> System.out.println("invalid choice");
 
             }
-
         }
+        System.out.println("thank you, have a nice day!");
         scanner.close();
     }
     static void showBalance(double balance){
@@ -205,9 +205,33 @@ public class Main {
     }
     static double deposit(){
         double amount;
-        System.out.print("enter an amount to be deposited");
+        System.out.print("enter an amount to be deposited: ");
         amount = scanner.nextDouble();
-        return
+
+        if (amount < 0){
+            System.out.println("amount can't be negative");
+            return 0;
+        }
+        else {
+            return amount;
+        }
+    }
+    static double withdraw(double balance){
+        double amount;
+        System.out.println("enter amount to be withdrawn: ");
+        amount = scanner.nextDouble();
+
+        if (amount > balance){
+            System.out.println("insufficient funds");
+            return 0;
+        }
+        else if (amount < 0) {
+            System.out.println("amount can't be negative");
+            return 0;
+        }
+        else {
+            return amount;
+        }
     }
 
 }
