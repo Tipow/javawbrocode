@@ -170,7 +170,7 @@ public class Main {
 */
 
         //java banking program (beginners)
-
+/*
         double balance = 0;
         boolean isRunning = true;
         int choice;
@@ -198,9 +198,31 @@ public class Main {
             }
         }
         System.out.println("thank you, have a nice day!");
+        */
+
+        // java dice roller program
+        /*Random random = new Random();
+        int numOfDice;
+        int total = 0;
+
+        System.out.print("enter the number of dice to roll: ");
+        numOfDice = scanner.nextInt();
+
+        if (numOfDice > 0){
+            for (int i = 0; i < numOfDice; i++){
+                int roll = random.nextInt(1,7);
+                System.out.println("you rolled: " + roll);
+                total += roll;
+            }
+            System.out.println("Total: " + total);
+        }
+        else {
+            System.out.println("number of dice must be greater than 0");
+        }
+*/
         scanner.close();
     }
-    static void showBalance(double balance){
+    /* static void showBalance(double balance){
         System.out.printf("$%.2f\n", balance);
     }
     static double deposit(){
@@ -234,4 +256,5 @@ public class Main {
         }
     }
 
+     */
 }
