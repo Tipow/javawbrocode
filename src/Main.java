@@ -237,7 +237,7 @@ public class Main {
 
         //java quiz game
 
-        String[] questions = {  "what is the function of a router?",
+       /* String[] questions = {  "what is the function of a router?",
                                 "what part of the computer is considered the brain?",
                                 "what year was facebook launched?",
                                 "who is known as the father of computers?",
@@ -283,6 +283,50 @@ public class Main {
         }
         System.out.println("your final score is: " + score + " out of " + questions.length);
 
+*/
+        //rock paper scissors game
+
+        Random random = new Random();
+
+        String[] choices = {"rock", "paper", "scissors"};
+        String playerChoice;
+        String computerChoice;
+        String playAgain = "yes";
+
+        do {
+            System.out.print("enter your move (rock, paper, scissors): ");
+            playerChoice = scanner.nextLine().toLowerCase();
+
+            if (!playerChoice.equals("rock") &&
+                    !playerChoice.equals("paper") &&
+                    !playerChoice.equals("scissors")){
+                System.out.println("invalid choice");
+                continue;
+            }
+
+
+            computerChoice = choices[random.nextInt(3)];
+            System.out.println("computer choice: " + computerChoice);
+
+
+            if (playerChoice.equals(computerChoice)){
+                System.out.println("it's a tie");
+            }
+            else if ((playerChoice.equals("rock") && computerChoice.equals("scissors")) ||
+                    (playerChoice.equals("paper") && computerChoice.equals("rock")) ||
+                    (playerChoice.equals("scissors") && computerChoice.equals("paper")) ) {
+                System.out.println("you win!");
+            }
+            else {
+                System.out.println("you lose");
+            }
+
+            System.out.print("play again? (yes/no): ");
+            playAgain = scanner.nextLine().toLowerCase();
+
+        } while (playAgain.equals("yes"));
+
+        System.out.println("thanks for playing");
 
         scanner.close();
     }
