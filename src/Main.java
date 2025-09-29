@@ -1,5 +1,4 @@
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -331,7 +330,7 @@ public class Main {
 
         // java slot machine
 
-        int balance = 100;
+       /* int balance = 100;
         int bet;
         int payout;
         String[] row;
@@ -381,10 +380,23 @@ public class Main {
         }
 
         System.out.println("game over,your current balance is $" + balance );
+*/
+
+        //OOP
+        Car car1 = new Car("Mustang", "Red");
+        Car car2 = new Car("Corvette", "Blue");
+        Car car3 = new Car("Charger", "Yellow");
+
+        Car[] cars = {car1, car2, car3};
+
+        for (Car car: cars){
+            car.drive();
+        }
+
 
         scanner.close();
     }
-    static String[] spinRow(){
+   /* static String[] spinRow(){
         String[] symbols = { "🍒" , "🍉", "🍋", "🔔", "🟊" };
         String[] row = new String[3];
         Random random = new Random();
@@ -413,6 +425,7 @@ public class Main {
         }
         return 0;
     }
+    */
     /* static void showBalance(double balance){
         System.out.printf("$%.2f\n", balance);
     }
