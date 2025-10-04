@@ -383,7 +383,7 @@ public class Main {
 */
 
         //OOP
-        Car car1 = new Car("Mustang", "Red");
+       /*  Car car1 = new Car("Mustang", "Red");
         Car car2 = new Car("Corvette", "Blue");
         Car car3 = new Car("Charger", "Yellow");
 
@@ -391,7 +391,15 @@ public class Main {
 
         for (Car car: cars){
             car.drive();
-        }
+         */
+
+        // abstraction
+        Circle circle = new Circle(3);
+        Triangle triangle = new Triangle(4,5);
+        
+
+        System.out.println(circle.area());
+        System.out.println(triangle.area());
 
 
         scanner.close();
