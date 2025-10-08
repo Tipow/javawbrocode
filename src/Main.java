@@ -1,4 +1,5 @@
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -394,12 +395,27 @@ public class Main {
          */
 
         // abstraction
-        Circle circle = new Circle(3);
+       /* Circle circle = new Circle(3);
         Triangle triangle = new Triangle(4,5);
         
 
         System.out.println(circle.area());
         System.out.println(triangle.area());
+
+*/
+        // arraylist
+        ArrayList<String> foods = new ArrayList<>();
+
+        System.out.print("Enter the # of food you would like: ");
+        int numOffood = scanner.nextInt();
+        scanner.nextLine();
+
+        for (int i = 1; i <= numOffood; i++){
+            System.out.print("Enter food #" + i + ": ");
+            String food = scanner.nextLine();
+            foods.add(food);
+        }
+        System.out.println(foods);
 
 
         scanner.close();
